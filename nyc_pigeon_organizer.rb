@@ -24,23 +24,13 @@ def nyc_pigeon_organizer(data)
   data.each do |key, value|
     value.each do |inner_key, inner_value|
       inner_value.each do |name|
-        pigeon_organizer[name][key] = pigeon_organizer[name][key] << inner_key
+        pigeon_organizer[name][key] = pigeon_organizer[name][key] << inner_key.to_s
       end
     end
   end
   pigeon_organizer
 end
   
-#def nyc_pigeon_organizer(data)
- # data.each_with_object({}) do |(key, value), final_array|
- #   value.each do |inner_key, names|
- #     names.each do |name|
- #       if !final_array[name]
- #         final_array[name] = {}
- #       end
- #     end
- #   end
- # end 
-#end
+
 
 
